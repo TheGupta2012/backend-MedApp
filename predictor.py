@@ -10,6 +10,7 @@ class Predictions():
     append the query to the data set that you currently have '''
     def __init__(self,model,data_path):
         self.model = model
+        self.path = data_path
         self.data = pd.read_csv(data_path)
         self.stemmer = SnowballStemmer('english')
         punctuation='["\'?,\.]'
@@ -66,6 +67,15 @@ class Predictions():
         '''Take the query and prediction and then append it to original data '''
         
         col1 = 'stemmed_phrase'
-        col2 = 'Phrase'
-        self.data.append([{col1 : query , col2 : ailment}] , ignore_index = True)
+        col2 = 'Prompt'
+        self.data = self.data.append([{col1 : str(query) , col2 : ailment}] , ignore_index = True)
+        try: 
+            self.data = self.data.drop(['Unnamed: 0','Unnamed: 0.1'],axis=1)
+        except:
+            pass
+        try:
+            self.data = self.data.drop(['Unnamed: 0'],axis=1)
+        except:
+            pass
+        self.data.to_csv(self.path)
         

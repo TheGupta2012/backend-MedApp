@@ -13,17 +13,20 @@ import numpy as np
 app = Flask(__name__)
 CORS(app)
 
-def load_from_pickle(file):
-    loaded = pickle.load(open(file,'rb'))
-    return loaded
+
 
 # got the models     
 
 # parameter 1 -> 
     # processes the query given by the site and make prediction   
 
-@app.route('/process',methods = ['GET'])
+@app.route('/process',methods = ['GET','POST'])
 def get_diagnosis():
+
+
+    def load_from_pickle(file):
+        loaded = pickle.load(open(file,'rb'))
+        return loaded
 
     vectorizer = load_from_pickle('models/vectorizer.pkl')
     model = load_from_pickle('models/model.pkl')
@@ -46,7 +49,7 @@ def get_diagnosis():
     ailment_top = ailments[res[0]]
     
     # append record to the data
-    diagnoser.append_query(query,ailment_top)
+    diagnoser.append_query(processed,ailment_top)
     
     #gather predictions 
     predictions = []
@@ -59,6 +62,7 @@ def get_diagnosis():
     
     # 0 -> do not train 
     # 1 -> train again 
+
     train = int(request.args.get('train')) # ->
     if(train is not None and train == 1):
         # means I need to train along with this query 
