@@ -15,7 +15,7 @@ An NLP based API to predict what ailments a person is experiencing given how the
 
     - **query** : This parameter is used to send the actual information to the API for processing and is of `string` type
     
-    - **train** : This is quite different parameter for the API and its values denote whether to **train the model again at the end of processing or not** 🏋️
+    - **train** : This is a quite different parameter for the API and its values denote whether to **train the model again at the end of processing or not** 🏋️
 
 > train = 0 : No training is done when 0 
                  
