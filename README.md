@@ -1,6 +1,7 @@
 <img src="data/image2.jpg" width = 95% height = 25% >
 
 # 🔹 Auto Medical Diagnosis 
+🚨 _Created for InnovateNSUT 2021_
 > An NLP based API to predict what ailments a person may be experiencing given how they are currently feeling.
 
 ## 🔸Overview
