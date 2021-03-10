@@ -43,3 +43,4 @@
 - The main application is hosted at [MedApp](https://med-app-nsut.netlify.app)
 - If you want to see the frontend repository go at [Front End - MedApp](https://github.com/VatD/MedApp)
 - For the backend repository go to [Back End - MedApp](https://github.com/Abhishek-7139/MedAppAPI)
+- For usage document go to the following [Document](https://drive.google.com/file/d/1vHvobvnBGQDlPTc-K89k81ZHIavu370_/view) 
