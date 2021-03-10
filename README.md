@@ -1,6 +1,6 @@
 <img src="data/image2.jpg" width = 95% height = 25% >
 
-# 🔹 backend-MedApp 
+# 🔹 Auto Medical Diagnosis 
 > An NLP based API to predict what ailments a person may be experiencing given how they are currently feeling.
 
 ## 🔸Overview
