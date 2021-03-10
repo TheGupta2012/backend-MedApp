@@ -4,9 +4,10 @@
 > An NLP based API to predict what ailments a person may be experiencing given how they are currently feeling.
 
 ## 🔸Overview
-- This API is supposed to be a helper to the day to day doctor in determining beforehand how a person is feeling and what are their symptoms without reading the whole description that the patient provides.
-- This shall save time and effort on the side of the doctor and let them focus more on preparing in the directions of the *ailments predicted*
+- This API is supposed to be of one of endpoints for [medApp](https://med-app-nsut.netlify.app) in determining beforehand how a person is feeling and what are their symptoms without reading the whole description that the patient provides.
+
 - `process` endpoint serves as a link to the original MedApp to provide ailments classified according to the query.
+ 
 
 ## 🔸Basis of Model
 - This API is based on **NLP** and uses **Random Forest Classification**, behind the scenes, to classify a person's textual description into one of the many ailments present in the dataset. 
@@ -37,3 +38,8 @@
 - This model is currently reliant on *~ 800 data points* and thus would not be very rich in terms vocabulary. This problem would be overcome as the model is populated with more data overtime
 
 - Another feature that we look to implement is *automatic training calls* to our API. Currently `train` parameter is a *manual* parameter which we need to pass to train our model at the server. We aim to make this automated in the future.
+
+## Team Repositories and App
+- The main application is hosted at [MedApp](https://med-app-nsut.netlify.app)
+- If you want to see the frontend repository go at [Front End - MedApp](https://github.com/VatD/MedApp)
+- For the backend repository go to [Back End - MedApp](https://github.com/Abhishek-7139/MedAppAPI)
