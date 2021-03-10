@@ -4,7 +4,7 @@
 > An NLP based API to predict what ailments a person may be experiencing given how they are currently feeling.
 
 ## 🔸Overview
-- This API is supposed to be of one of endpoints for [medApp](https://med-app-nsut.netlify.app) in determining beforehand how a person is feeling and what are their symptoms without reading the whole description that the patient provides.
+- This API is supposed to be of one of endpoints for [MedApp](https://med-app-nsut.netlify.app) in determining beforehand how a person is feeling and what are their symptoms without reading the whole description that the patient provides.
 
 - `process` endpoint serves as a link to the original MedApp to provide ailments classified according to the query.
  
