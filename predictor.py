@@ -68,7 +68,7 @@ class Predictions():
         
         col1 = 'stemmed_phrase'
         col2 = 'Prompt'
-        self.data = self.data.append([{col1 : str(query) , col2 : ailment}] , ignore_index = True)
+        self.data = self.data.append([{col1 : query[1:-1] , col2 : ailment}] , ignore_index = True)
         try: 
             self.data = self.data.drop(['Unnamed: 0','Unnamed: 0.1'],axis=1)
         except:
